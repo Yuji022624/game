@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Love ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading">❤️ FIND YOUR LOVE<br><small>Preparing your adventure...</small></div>
+
+  <header id="hud">
+    <h2>FIND YOUR LOVE ❤️</h2>
+    <div id="stage">LEVEL 1 OF 5</div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <p id="hint">Your journey begins. Find your love!</p>
+  </header>
+
+  <div id="intro" class="overlay">
+    <h1>FIND YOUR LOVE</h1>
+    <p>Five challenges stand between you and the one you love.</p>
+    <p class="small">Move with WASD · Jump with SPACE · Rotate camera by dragging</p>
+    <button id="startBtn">START MY JOURNEY ❤️</button>
+  </div>
+
+  <div id="mobileControls">
+    <div class="arrows">
+      <button data-key="w">▲</button>
+      <div>
+        <button data-key="a">◀</button>
+        <button data-key="s">▼</button>
+        <button data-key="d">▶</button>
+      </div>
+    </div>
+    <button id="jumpBtn">JUMP ⤴</button>
+  </div>
+
+  <div id="ending" class="overlay hidden">
+    <h1>YOU FOUND HER! ❤️</h1>
+    <p>Five challenges. One destination. You were worth every step.</p>
+    <p id="endingMessage">My favourite place will always be beside you. 🧿</p>
+    <button id="againBtn">PLAY AGAIN ↻</button>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

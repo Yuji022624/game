@@ -1,0 +1,186 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #eaa18d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  z-index: 2;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92%, 400px);
+  padding: 12px 18px;
+  text-align: center;
+  border: 1px solid #ffffff55;
+  border-radius: 18px;
+  background: #281632d9;
+  pointer-events: none;
+}
+
+#hud h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+#stage {
+  color: #ffd49b;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+#hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.progress {
+  height: 6px;
+  background: #ffffff44;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff669c, #ffe5a5);
+  transition: width 0.3s;
+}
+
+button {
+  color: white;
+  background: linear-gradient(135deg, #ff4c91, #9656d8);
+  border: 1px solid #ffffff80;
+  border-radius: 14px;
+  padding: 13px 17px;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: none;
+}
+
+button:active {
+  transform: scale(0.94);
+}
+
+.overlay {
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(#281333a8, #120b27e8);
+}
+
+.overlay h1 {
+  font-size: clamp(30px, 7vw, 55px);
+  text-shadow: 0 0 25px #ff559a;
+  margin-bottom: 8px;
+}
+
+.overlay p {
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.overlay .small {
+  font-size: 12px;
+  color: #ffdfed;
+}
+
+#startBtn, #againBtn {
+  margin-top: 16px;
+  padding: 16px 24px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#mobileControls {
+  position: fixed;
+  z-index: 3;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrows button {
+  min-width: 45px;
+  min-height: 43px;
+  margin: 2px;
+  padding: 8px;
+  font-size: 18px;
+}
+
+#jumpBtn {
+  min-height: 53px;
+  border-radius: 30px;
+  background: #5639a8ee;
+}
+
+#mobileControls button {
+  pointer-events: auto;
+}
+
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  background: #24112f;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#loading small {
+  letter-spacing: 0;
+  font-weight: normal;
+}
+
+@media (max-width: 500px) {
+  #hud h2 {
+    font-size: 16px;
+  }
+  .overlay p {
+    font-size: 14px;
+  }
+}
